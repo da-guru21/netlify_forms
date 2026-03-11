@@ -21,6 +21,12 @@
     </section>
 
     <section>
+        <div id="success-message" style="display:none; background:#d4edda; color:#155724; padding:10px; margin:10px 0; border:1px solid #c3e6cb;">
+      ✅ Thank you for your submission! We'll get back to you soon.
+    </div>
+    </section>
+
+    <section>
         <h3>Mission</h3>
         <p>To create an enabling regulatory environment for sustainable growth of
             the insurance industry in Uganda while upholding best practices.
@@ -41,6 +47,13 @@
         <h3>Vision</h3>
         <p>A model regulator of developed and secure insurance industry.</p>
     </section>
+    <script>
+        if (window.location.search.includes("contact")) {
+          document.getElementById("success-message").style.display = "block";
+          setTimeout(() => {
+            document.getElementById("success-message").style.display = "none";
+          }, 5000)};
+    </script>
 </body>
 
 </html>
